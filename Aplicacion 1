@@ -1,0 +1,26 @@
+string R = "s";
+            while (R == "s")
+            {
+                Console.WriteLine("Escribe el nombre del archivo: ");
+                string archivo = Console.ReadLine();
+
+ 
+
+
+                StreamWriter nombre;
+                nombre = File.CreateText(archivo + ".txt");
+                nombre.WriteLine("HOLA AQUI SE CREO EL ARCHIVO CON EL NOMBRE QUE ELIGIÓ..");
+                nombre.Close();
+
+ 
+
+
+                Console.WriteLine("Quieres crear otro archivo?");
+                Console.WriteLine("s/n");
+                R = Console.ReadLine();
+                Console.Clear();
+                if (R == "no")
+                {
+                    return;
+                }
+                
